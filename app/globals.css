@@ -18,11 +18,11 @@
   --media: #1f1e1b;
   --media-muted: #c7b5aa;
   --media-ink: #f5f1e8;
-  --media-accent: #efc2c8;
+  --media-accent: #86182d;
   --hero-accent: #a51e3a;
   --band: #141211;
   --band-ink: #f5f1e8;
-  --band-accent: #efc2c8;
+  --band-accent: #86182d;
   --band-btn: #f5f1e8;
   --band-btn-ink: #141211;
   --surface-rgb: 251, 248, 242;
@@ -33,7 +33,7 @@
   --band-ink-rgb: 245, 241, 232;
   --media-ink-rgb: 245, 241, 232;
   --shade-rgb: 20, 18, 17;
-  --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --serif: 'Satoshi', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ease: cubic-bezier(.16, .84, .24, 1);
 }
