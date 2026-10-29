@@ -98,10 +98,10 @@ export default function Home() {
             <div className="hero-media">
               <div className="hero-zoom" data-zoom="0.18">
                 <img
-                  src="/img/hero-grey.webp"
-                  srcSet="/img/hero-grey-sm.webp 900w, /img/hero-grey.webp 1536w"
+                  src="/img/hero-cafe.webp"
+                  srcSet="/img/hero-cafe-sm.webp 900w, /img/hero-cafe.webp 1536w"
                   sizes="100vw"
-                  alt="Friends gathered and talking in a bright studio"
+                  alt="Friends talking around a marble table in a Paris café at dusk"
                   fetchPriority="high"
                   width={1536}
                   height={1024}
