@@ -56,6 +56,14 @@ export default function ScrollEffects() {
         const ws = s.querySelectorAll<HTMLElement>('[data-w]');
         const n = ws.length;
         ws.forEach((w, i) => { w.style.opacity = String(0.14 + 0.86 * clamp(prog * (n + 2) - i)); });
+        // The highlight pill sweeps in behind its words as they fill; each word turns white once covered.
+        s.querySelectorAll<HTMLElement>('.shift-pill').forEach((pill) => {
+          const pw = Array.from(pill.querySelectorAll<HTMLElement>('[data-w]'));
+          const first = Array.prototype.indexOf.call(ws, pw[0]);
+          const lit = pw.map((_, j) => clamp(prog * (n + 2) - (first + j)));
+          pill.style.setProperty('--hl', (lit.reduce((a, b) => a + b, 0) / pw.length).toFixed(4));
+          pw.forEach((w, j) => w.classList.toggle('is-lit', lit[j] > 0.5));
+        });
       });
 
       if (!reduce) {

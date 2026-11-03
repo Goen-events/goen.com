@@ -175,9 +175,11 @@ button { font: inherit; }
 .shift-text { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4.2vw, 68px); line-height: 1.1; letter-spacing: -.02em; display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; row-gap: .1em; max-width: 18em; }
 .shift-text [data-w] { opacity: .14; transition: opacity .2s linear; }
 .shift-lead { display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; flex-basis: 100%; max-width: 13em; margin: 0 auto .2em; }
-.shift-pill { display: inline-flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; padding: .08em .45em .16em; border-radius: .32em; background: var(--accent); color: var(--on-accent); }
+.shift-pill { --hl: 0; display: inline-flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; padding: .08em .45em .16em; border-radius: .32em; background: linear-gradient(var(--accent), var(--accent)) left / calc(var(--hl) * 100%) 100% no-repeat; color: var(--ink); }
+.shift-pill [data-w] { transition: opacity .2s linear, color .2s linear; }
+.shift-pill [data-w].is-lit { color: var(--on-accent); }
 .shift-sub { margin: 0; max-width: 30em; font-size: 18px; line-height: 1.6; color: var(--muted); text-wrap: pretty; }
-@media (prefers-reduced-motion: reduce) { .shift-text [data-w] { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .shift-text [data-w] { opacity: 1; } .shift-pill { --hl: 1; } .shift-pill [data-w] { color: var(--on-accent); } }
 
 /* ---------- Product (horizontal) ---------- */
 .h-sec { position: relative; height: 340vh; }
