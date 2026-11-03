@@ -172,11 +172,12 @@ button { font: inherit; }
 /* ---------- The shift ---------- */
 .shift { position: relative; height: 300vh; }
 .shift-pin { position: sticky; top: 0; height: 100vh; min-height: 600px; max-width: 1300px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px; text-align: center; }
-.shift-text { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(46px, 6.8vw, 116px); line-height: 1; letter-spacing: -.02em; display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; max-width: 14em; }
-.shift-text span { opacity: .14; transition: opacity .2s linear; }
-.shift-text em { color: var(--accent); }
+.shift-text { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4.2vw, 68px); line-height: 1.1; letter-spacing: -.02em; display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; row-gap: .1em; max-width: 18em; }
+.shift-text [data-w] { opacity: .14; transition: opacity .2s linear; }
+.shift-lead { display: flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; flex-basis: 100%; max-width: 13em; margin: 0 auto .2em; }
+.shift-pill { display: inline-flex; flex-wrap: wrap; justify-content: center; column-gap: .24em; padding: .08em .45em .16em; border-radius: .32em; background: var(--accent); color: var(--on-accent); }
 .shift-sub { margin: 0; max-width: 30em; font-size: 18px; line-height: 1.6; color: var(--muted); text-wrap: pretty; }
-@media (prefers-reduced-motion: reduce) { .shift-text span { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .shift-text [data-w] { opacity: 1; } }
 
 /* ---------- Product (horizontal) ---------- */
 .h-sec { position: relative; height: 340vh; }

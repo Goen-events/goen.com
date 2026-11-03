@@ -1,7 +1,7 @@
 // All page copy and data in one place so it can be edited without touching layout.
 
 export const shiftWords = 'You met twelve brilliant people last month. How many do you still talk to?'.split(' ');
-export const shiftAccentFrom = 10; // "How many do you still talk to?" is in the accent colour
+export const shiftHighlightFrom = 7; // "How many do you still talk to?" sits on its own line in a highlight pill
 
 export type Feature = {
   key: 'scan' | 'voice' | 'map';

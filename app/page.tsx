@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import ScrollEffects from '@/components/ScrollEffects';
 import Faq from '@/components/Faq';
 import Waitlist from '@/components/Waitlist';
-import { buildOrbit, features, shiftWords, shiftAccentFrom, stories, wave, type Feature } from '@/lib/content';
+import { buildOrbit, features, shiftWords, shiftHighlightFrom, stories, wave, type Feature } from '@/lib/content';
 
 const delay = (ms: number) => ({ ['--d' as string]: `${ms}ms` }) as CSSProperties;
 
@@ -189,9 +189,12 @@ export default function Home() {
         <section className="shift" data-pin="">
           <div className="shift-pin">
             <p className="shift-text" data-scrub="pin">
-              {shiftWords.map((w, i) =>
-                i >= shiftAccentFrom ? <em key={i}><span data-w="">{w}</span></em> : <span key={i} data-w="">{w}</span>,
-              )}
+              <span className="shift-lead">
+                {shiftWords.slice(0, shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
+              </span>
+              <mark className="shift-pill">
+                {shiftWords.slice(shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
+              </mark>
             </p>
             <p className="shift-sub" data-reveal="up" style={delay(100)}>
               Goen replaces the handle-swapping, the forgotten names and the “great to meet you” that goes nowhere.
