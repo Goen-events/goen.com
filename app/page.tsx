@@ -82,7 +82,7 @@ export default function Home() {
       {/* HEADER */}
       <header className="nav-wrap">
         <div className="nav">
-          <a href="#top" className="wordmark" aria-label="goen, back to top">goen</a>
+          <a href="#top" className="wordmark" aria-label="goen, back to top"><img src="/img/goen-mark.svg" alt="" className="logo-mark" width={219} height={207} />goen</a>
           <nav className="nav-links" aria-label="Main">
             <a href="#product" className="plain">Product</a>
             <a href="#faq" className="plain">FAQ</a>
@@ -296,7 +296,7 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-grid">
             <div className="footer-brand">
-              <span className="serif">goen</span>
+              <span className="serif"><img src="/img/goen-mark.svg" alt="" className="logo-mark" width={219} height={207} />goen</span>
               <span>Get more out of your relationships.</span>
             </div>
             <div className="footer-col">
