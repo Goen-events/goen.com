@@ -126,6 +126,23 @@ export default function Home() {
           </div>
         </section>
 
+        {/* THE SHIFT */}
+        <section className="shift" data-pin="">
+          <div className="shift-pin">
+            <p className="shift-text" data-scrub="pin">
+              <span className="shift-lead">
+                {shiftWords.slice(0, shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
+              </span>
+              <mark className="shift-pill">
+                {shiftWords.slice(shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
+              </mark>
+            </p>
+            <p className="shift-sub" data-reveal="up" style={delay(100)}>
+              Goen replaces the handle-swapping, the forgotten names and the “great to meet you” that goes nowhere.
+            </p>
+          </div>
+        </section>
+
         {/* OVERVIEW */}
         <section id="overview">
           <div className="overview-inner">
@@ -182,23 +199,6 @@ export default function Home() {
                 <Callout kind="first" />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* THE SHIFT */}
-        <section className="shift" data-pin="">
-          <div className="shift-pin">
-            <p className="shift-text" data-scrub="pin">
-              <span className="shift-lead">
-                {shiftWords.slice(0, shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
-              </span>
-              <mark className="shift-pill">
-                {shiftWords.slice(shiftHighlightFrom).map((w, i) => <span key={i} data-w="">{w}</span>)}
-              </mark>
-            </p>
-            <p className="shift-sub" data-reveal="up" style={delay(100)}>
-              Goen replaces the handle-swapping, the forgotten names and the “great to meet you” that goes nowhere.
-            </p>
           </div>
         </section>
 
