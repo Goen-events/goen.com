@@ -33,7 +33,7 @@
   --band-ink-rgb: 245, 241, 232;
   --media-ink-rgb: 245, 241, 232;
   --shade-rgb: 20, 18, 17;
-  --serif: 'Gambetta', Georgia, 'Times New Roman', serif;
+  --serif: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --sans: 'Switzer', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --logo: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ease: cubic-bezier(.16, .84, .24, 1);
