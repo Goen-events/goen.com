@@ -157,15 +157,11 @@ export default function Home() {
         <section id="overview">
           <div className="overview-inner">
 
-            <h2 className="display statement" data-reveal="up" style={delay(80)}>
-              Goen is your personal network management tool, helping you <em className="accent">get more out of your connections.</em>
-            </h2>
-
-            <div className="network" data-reveal="up" style={delay(160)}>
+            <div className="network" data-reveal="up" style={delay(80)}>
               <div className="network-head">
-                <div className="network-title">
-                  <span className="serif">Everyone you know, <em className="accent">arranged around you.</em></span>
-                </div>
+                <h2 className="network-title serif">
+                  Goen is your personal network management tool, helping you <em className="accent">get more out of your connections.</em>
+                </h2>
                 <div className="legend">
                   <span><i />Close</span>
                   <span><i />In touch</span>

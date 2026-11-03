@@ -130,19 +130,17 @@ button { font: inherit; }
 .dots span + span { margin-left: -9px; }
 .proof-text { font-size: 14px; color: var(--ink-2); }
 .proof-text strong { color: var(--ink); font-weight: 700; }
-.statement { max-width: 17em; text-align: center; font-size: clamp(36px, 4.4vw, 66px); line-height: 1.04; }
 
 .network { position: relative; overflow: hidden; width: 100%; border-radius: 36px; background: var(--surface-2); border: 1px solid rgba(var(--ink-rgb), .08); padding: clamp(20px, min(4vw, 4.5vh), 48px); display: flex; flex-direction: column; gap: clamp(16px, min(3vw, 3vh), 36px); scroll-margin-top: 80px; }
 .network-head { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px; }
-.network-title { display: flex; flex-direction: column; gap: 8px; }
-.network-title .serif { font-size: clamp(30px, 3.2vw, 44px); line-height: 1.02; }
+.network-title { margin: 0; max-width: 15em; text-align: left; text-wrap: balance; font-size: clamp(28px, 3.4vw, 48px); line-height: 1.06; letter-spacing: -.02em; }
 .legend { display: flex; gap: 18px; font-size: 13px; color: var(--muted); padding-bottom: 6px; }
 .legend span { display: flex; align-items: center; gap: 6px; }
 .legend i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .legend i.drift { background: var(--ink); opacity: .5; }
 
 /* Square orbit sized to the viewport height so the whole card fits on one screen: ~300px covers nav, card padding, heading and gaps. */
-.orbit { position: relative; width: min(100%, 680px, max(280px, calc(100svh - 300px))); aspect-ratio: 1; margin: 0 auto; }
+.orbit { position: relative; width: min(100%, 680px, max(280px, calc(100svh - 400px))); aspect-ratio: 1; margin: 0 auto; }
 .orbit-glow { position: absolute; inset: -40%; border-radius: 50%; background: radial-gradient(circle, rgba(var(--deep-rgb), .22) 0%, rgba(var(--deep-rgb), .08) 30%, transparent 60%); pointer-events: none; }
 .orbit-ring { position: absolute; border-radius: 50%; }
 .orbit-spin { position: absolute; inset: 0; }
@@ -172,7 +170,7 @@ button { font: inherit; }
   .callouts-stack { display: flex; flex-direction: row; margin-top: 0; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: calc(-1 * clamp(20px, 4vw, 48px)); padding-inline: clamp(20px, 4vw, 48px); padding-bottom: 4px; }
   .callouts-stack::-webkit-scrollbar { display: none; }
   .callouts-stack .callout { flex: 0 0 min(78%, 280px); scroll-snap-align: center; box-shadow: none; }
-  .orbit { width: min(100%, max(220px, calc(100svh - 420px))); }
+  .orbit { width: min(100%, max(220px, calc(100svh - 520px))); }
 }
 
 /* ---------- The shift ---------- */
