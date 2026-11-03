@@ -1,12 +1,11 @@
 // All page copy and data in one place so it can be edited without touching layout.
 
 export const shiftWords = 'You met twelve brilliant people last month. How many do you still talk to?'.split(' ');
-export const shiftAccentFrom = 10; // "How many do you still talk to?" is italic + accent
+export const shiftAccentFrom = 10; // "How many do you still talk to?" is in the accent colour
 
 export type Feature = {
   key: 'scan' | 'voice' | 'map';
   num: string;
-  kicker: string;
   short: string;
   title: string;
   em: string;
@@ -18,17 +17,17 @@ export type Feature = {
 
 export const features: Feature[] = [
   {
-    key: 'scan', num: '01', kicker: 'THE EXCHANGE', short: 'EXCHANGE', title: 'One scan.', em: 'All of you.',
+    key: 'scan', num: '01', short: 'EXCHANGE', title: 'One scan.', em: 'All of you.',
     line: 'Socials, portfolio and number, swapped in a single hello. Nothing to download on their side.',
     img: '/img/exchange-final.webp', pos: '35% 30%', alt: 'One person holding up their phone to be scanned at a rooftop bar',
   },
   {
-    key: 'voice', num: '02', kicker: 'VOICE NOTES', short: 'VOICE NOTES', title: 'Remember', em: 'how it felt.',
+    key: 'voice', num: '02', short: 'VOICE NOTES', title: 'Remember', em: 'how it felt.',
     line: 'Leave a ten-second voice note on each profile. Press play next time and the whole conversation comes back.',
     img: '/img/voice-note.webp', pos: '40% 30%', alt: 'Someone recording a voice note on their phone while walking home',
   },
   {
-    key: 'map', num: '03', kicker: 'YOUR NETWORK', short: 'NETWORK', title: 'See who’s', em: 'in your life.',
+    key: 'map', num: '03', short: 'NETWORK', title: 'See who’s', em: 'in your life.',
     line: 'Everyone you know, arranged around you, with a nudge when someone starts to drift.',
     img: '/img/network.webp', pos: '30% 30%', alt: 'A long dinner table of friends seen from above',
   },

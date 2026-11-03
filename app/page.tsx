@@ -143,7 +143,6 @@ export default function Home() {
             <div className="network" data-reveal="up" style={delay(160)}>
               <div className="network-head">
                 <div className="network-title">
-                  <span className="kicker">YOUR NETWORK</span>
                   <span className="serif">Everyone you know, <em className="accent">arranged around you.</em></span>
                 </div>
                 <div className="legend">
@@ -189,7 +188,6 @@ export default function Home() {
         {/* THE SHIFT */}
         <section className="shift" data-pin="">
           <div className="shift-pin">
-            <span className="kicker" data-reveal="up">THE SHIFT</span>
             <p className="shift-text" data-scrub="pin">
               {shiftWords.map((w, i) =>
                 i >= shiftAccentFrom ? <em key={i}><span data-w="">{w}</span></em> : <span key={i} data-w="">{w}</span>,
@@ -207,7 +205,6 @@ export default function Home() {
             <div className="h-pin">
               <div className="h-head">
                 <h2 className="display">One hello in. A <em className="accent">relationship</em> out.</h2>
-                <span className="kicker">THE PRODUCT</span>
               </div>
               <div className="h-viewport">
                 <div className="h-track" data-h-track="">
@@ -220,7 +217,6 @@ export default function Home() {
                       <span className="h-num" aria-hidden="true">{f.num}</span>
                       <div className="h-chip-pos" aria-hidden="true"><Chip kind={f.key} /></div>
                       <div className="h-copy">
-                        <span className="kicker">{f.kicker}</span>
                         <h3 className="display">{f.title} <em>{f.em}</em></h3>
                         <p>{f.line}</p>
                       </div>
@@ -243,7 +239,6 @@ export default function Home() {
         {/* TESTIMONIALS */}
         <section id="stories" className="stories">
           <div className="stories-head">
-            <span className="kicker" data-reveal="up">FROM THE BETA</span>
             <h2 className="display big-h" data-reveal="up" style={delay(80)}>People, <em className="accent">kept.</em></h2>
           </div>
           <div className="stories-body">
@@ -267,7 +262,6 @@ export default function Home() {
         <section id="faq" className="faq">
           <div className="faq-inner">
             <div className="faq-head">
-              <span className="kicker" data-reveal="up">FAQ</span>
               <h2 className="display big-h" data-reveal="up" style={delay(80)}>Good <em className="accent">questions.</em></h2>
             </div>
             <Faq />
@@ -282,7 +276,6 @@ export default function Home() {
             </div>
             <div className="band-shade" />
             <div className="band-content">
-              <span className="kicker">JOIN THE BETA</span>
               <h2 className="display big-h">Your next favourite person is <em>one scan away.</em></h2>
               <Waitlist />
               <span className="band-note">Invites go out weekly. Core features stay free, forever.</span>
