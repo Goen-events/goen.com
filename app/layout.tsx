@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'goen — Get more out of your relationships',
     description,
-    images: [{ url: '/img/hero-winebar.webp', width: 1536, height: 1024, alt: 'Friends talking around a marble table in a candlelit wine bar' }],
+    images: [{ url: '/img/hero-paris-cafe.webp', width: 1536, height: 1024, alt: 'Friends talking around a marble table in a Paris café at dusk' }],
     type: 'website',
   },
-  twitter: { card: 'summary_large_image', title: 'goen — Get more out of your relationships', description, images: ['/img/hero-winebar.webp'] },
+  twitter: { card: 'summary_large_image', title: 'goen — Get more out of your relationships', description, images: ['/img/hero-paris-cafe.webp'] },
 };
 
 export const viewport: Viewport = { themeColor: '#f5f1e8' };
@@ -34,8 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link
           rel="preload"
           as="image"
-          href="/img/hero-winebar.webp"
-          imageSrcSet="/img/hero-winebar-sm.webp 900w, /img/hero-winebar.webp 1536w"
+          href="/img/hero-paris-cafe.webp"
+          imageSrcSet="/img/hero-paris-cafe-sm.webp 900w, /img/hero-paris-cafe.webp 1536w"
           imageSizes="100vw"
           fetchPriority="high"
         />
