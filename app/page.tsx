@@ -212,7 +212,7 @@ export default function Home() {
               <div className="h-viewport">
                 <div className="h-track" data-h-track="">
                   {features.map((f) => (
-                    <article key={f.key} className="h-card" data-h-card="">
+                    <article key={f.key} className={`h-card h-card-${f.key}`} data-h-card="">
                       <div className="h-img" data-h-img="">
                         <img src={f.img} alt={f.alt} loading="lazy" style={{ objectPosition: f.pos }} width={1880} height={836} />
                       </div>
@@ -265,7 +265,7 @@ export default function Home() {
         <section id="faq" className="faq">
           <div className="faq-inner">
             <div className="faq-head">
-              <h2 className="display big-h" data-reveal="up" style={delay(80)}>Good <em className="accent">questions.</em></h2>
+              <h2 className="display big-h" data-reveal="up" style={delay(80)}>FAQs</h2>
             </div>
             <Faq />
           </div>

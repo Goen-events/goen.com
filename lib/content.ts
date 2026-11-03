@@ -19,17 +19,17 @@ export const features: Feature[] = [
   {
     key: 'scan', num: '01', short: 'EXCHANGE', title: 'One scan.', em: 'All of you.',
     line: 'Socials, portfolio and number, swapped in a single hello. Nothing to download on their side.',
-    img: '/img/exchange-final.webp', pos: '35% 30%', alt: 'One person holding up their phone to be scanned at a rooftop bar',
+    img: '/img/exchange-doorway.webp', pos: '30% 40%', alt: 'Three friends swapping details on their phones in the doorway of a wood-panelled dining room',
   },
   {
     key: 'voice', num: '02', short: 'VOICE NOTES', title: 'Remember', em: 'how it felt.',
     line: 'Leave a ten-second voice note on each profile. Press play next time and the whole conversation comes back.',
-    img: '/img/voice-note.webp', pos: '40% 30%', alt: 'Someone recording a voice note on their phone while walking home',
+    img: '/img/voice-hallway.webp', pos: '50% 35%', alt: 'A woman recording a voice note in a lamplit hallway outside a dinner party',
   },
   {
     key: 'map', num: '03', short: 'NETWORK', title: 'See who’s', em: 'in your life.',
     line: 'Everyone you know, arranged around you, with a nudge when someone starts to drift.',
-    img: '/img/network.webp', pos: '30% 30%', alt: 'A long dinner table of friends seen from above',
+    img: '/img/network-dining.webp', pos: '40% 35%', alt: 'Friends laughing and greeting each other around a dinner table in a wood-panelled room',
   },
 ];
 
