@@ -118,8 +118,6 @@ button { font: inherit; }
 .hero-actions .btn { padding: 15px 26px; font-size: 15px; }
 .text-link { font-size: 15px; font-weight: 600; color: var(--media-ink); border-bottom: 1px solid rgba(var(--media-ink-rgb), .5); padding-bottom: 2px; }
 .text-link:hover { color: var(--media-accent); }
-.hero-tag { font-size: 12px; font-weight: 700; letter-spacing: .18em; color: var(--media-ink); opacity: .85; }
-.motion .hero-tag[data-reveal].is-in { opacity: .85; }
 
 /* ---------- Overview ---------- */
 .overview-inner { max-width: 1240px; margin: 0 auto; padding: clamp(40px, 5vw, 64px) clamp(16px, 3vw, 40px) clamp(100px, 11vw, 160px); display: flex; flex-direction: column; align-items: center; gap: clamp(56px, 7vw, 96px); }

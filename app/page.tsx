@@ -122,7 +122,6 @@ export default function Home() {
                   <a href="#product" className="text-link">See it in action</a>
                 </div>
               </div>
-              <span className="hero-tag" data-reveal="up" style={delay(540)}>BETA FOREVER</span>
             </div>
           </div>
         </section>
