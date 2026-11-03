@@ -239,7 +239,7 @@ export default function Home() {
         {/* TESTIMONIALS */}
         <section id="stories" className="stories">
           <div className="stories-head">
-            <h2 className="display big-h" data-reveal="up" style={delay(80)}>People, <em className="accent">kept.</em></h2>
+            <h2 className="display big-h" data-reveal="up" style={delay(80)}>Testimonials</h2>
           </div>
           <div className="stories-body">
             {[stories.slice(0, 2), stories.slice(2)].map((row, ri) => (
