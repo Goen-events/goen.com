@@ -126,6 +126,16 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SOCIAL PROOF */}
+        <div className="proof-row">
+          <div className="proof" data-reveal="up">
+            <div className="dots" aria-hidden="true">
+              <span /><span /><span /><span style={{ background: 'var(--ink)' }} />
+            </div>
+            <span className="proof-text"><strong>1,000+ people</strong> already on the waitlist</span>
+          </div>
+        </div>
+
         {/* THE SHIFT */}
         <section className="shift" data-pin="">
           <div className="shift-pin">
@@ -146,12 +156,6 @@ export default function Home() {
         {/* OVERVIEW */}
         <section id="overview">
           <div className="overview-inner">
-            <div className="proof" data-reveal="up">
-              <div className="dots" aria-hidden="true">
-                <span /><span /><span /><span style={{ background: 'var(--ink)' }} />
-              </div>
-              <span className="proof-text"><strong>1,000+ people</strong> already on the waitlist</span>
-            </div>
 
             <h2 className="display statement" data-reveal="up" style={delay(80)}>
               Goen is your personal network management tool, helping you <em className="accent">get more out of your connections.</em>
