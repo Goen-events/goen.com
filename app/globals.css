@@ -35,6 +35,7 @@
   --shade-rgb: 20, 18, 17;
   --serif: 'Gambetta', Georgia, 'Times New Roman', serif;
   --sans: 'Switzer', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --logo: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ease: cubic-bezier(.16, .84, .24, 1);
 }
 
@@ -89,7 +90,7 @@ button { font: inherit; }
   background: rgba(var(--surface-rgb), .72); border-color: rgba(var(--ink-rgb), .12); box-shadow: 0 10px 30px rgba(var(--shade-rgb), .08);
   -webkit-backdrop-filter: blur(18px) saturate(1.2); backdrop-filter: blur(18px) saturate(1.2);
 }
-.wordmark { display: inline-flex; align-items: center; gap: .28em; font-family: var(--serif); font-size: 30px; line-height: 1; }
+.wordmark { display: inline-flex; align-items: center; gap: .28em; font-family: var(--logo); font-weight: 600; letter-spacing: -.03em; font-size: 30px; line-height: 1; }
 .logo-mark { flex: none; height: .9em; width: auto; }
 .nav-links { display: flex; align-items: center; gap: clamp(12px, 2.2vw, 30px); flex-wrap: wrap; justify-content: flex-end; font-size: 14px; font-weight: 500; }
 .nav-links .plain { color: var(--ink-2); }
@@ -293,7 +294,7 @@ button { font: inherit; }
 .footer-inner { max-width: 1320px; margin: 0 auto; padding: clamp(56px, 6vw, 90px) clamp(20px, 4vw, 56px) 36px; display: flex; flex-direction: column; gap: 56px; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 40px; }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; grid-column: span 2; min-width: 0; }
-.footer-brand .serif { display: inline-flex; align-items: center; gap: .24em; font-size: 44px; line-height: 1; color: var(--accent); }
+.footer-brand .serif { display: inline-flex; align-items: center; gap: .24em; font-family: var(--logo); font-weight: 600; letter-spacing: -.03em; font-size: 44px; line-height: 1; color: var(--accent); }
 .footer-brand span:last-child { font-size: 15px; color: var(--muted); max-width: 20em; }
 .footer-col { display: flex; flex-direction: column; gap: 14px; font-size: 15px; }
 .footer-col .kicker { letter-spacing: .16em; }
