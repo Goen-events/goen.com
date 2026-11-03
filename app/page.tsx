@@ -318,7 +318,7 @@ export default function Home() {
             </div>
           </div>
           <div className="footer-bottom">
-            <span>© 2026 Goen · Beta Forever</span>
+            <span>© 2026 Goen</span>
             <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
           </div>
         </div>
