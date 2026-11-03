@@ -204,7 +204,7 @@ export default function Home() {
           <div className="h-sec" data-h-sec="">
             <div className="h-pin">
               <div className="h-head">
-                <h2 className="display">One hello in. A <em className="accent">relationship</em> out.</h2>
+                <h2 className="display">Create conscious connections.</h2>
               </div>
               <div className="h-viewport">
                 <div className="h-track" data-h-track="">
