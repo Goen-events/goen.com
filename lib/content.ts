@@ -18,7 +18,7 @@ export type Feature = {
 export const features: Feature[] = [
   {
     key: 'scan', num: '01', short: 'EXCHANGE', title: 'Custom', em: 'Contact Cards',
-    line: 'Socials, portfolio and number, swapped in a single hello. Nothing to download on their side.',
+    line: 'Avoid the awkward contact exchange with personalised contact cards. One QR containing all your chosen contact info.',
     img: '/img/exchange-doorway.webp', pos: '30% 40%', alt: 'Three friends swapping details on their phones in the doorway of a wood-panelled dining room',
   },
   {
