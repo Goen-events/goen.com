@@ -116,7 +116,7 @@ export default function Home() {
                     <span data-reveal="rise" style={delay(120)}>Helping you turn connections into <em>real relationships.</em></span>
                   </span>
                 </h1>
-                <p className="hero-sub" data-reveal="up" style={delay(300)}>One scan to swap everything. One place to remember everyone.</p>
+                <p className="hero-sub" data-reveal="up" style={delay(300)}>Networking is hard... So let us handle the logistics while you focus on the people</p>
                 <div className="hero-actions" data-reveal="up" style={delay(420)}>
                   <a href="#join" className="btn">Join the beta</a>
                   <a href="#product" className="text-link">See it in action</a>

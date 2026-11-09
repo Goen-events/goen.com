@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-const description = 'One scan to swap everything. One place to remember everyone. Join the goen beta.';
+const description = 'Networking is hard... So let us handle the logistics while you focus on the people. Join the goen beta.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://goen-landing.vercel.app'),
