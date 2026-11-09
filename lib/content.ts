@@ -22,7 +22,7 @@ export const features: Feature[] = [
     img: '/img/exchange-doorway.webp', pos: '30% 40%', alt: 'Three friends swapping details on their phones in the doorway of a wood-panelled dining room',
   },
   {
-    key: 'voice', num: '02', short: 'VOICE NOTES', title: 'Remember', em: 'how it felt.',
+    key: 'voice', num: '02', short: 'VOICE NOTES', title: 'Store', em: 'personalised context',
     line: 'Leave a ten-second voice note on each profile. Press play next time and the whole conversation comes back.',
     img: '/img/voice-hallway.webp', pos: '50% 35%', alt: 'A woman recording a voice note in a lamplit hallway outside a dinner party',
   },
