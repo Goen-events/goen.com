@@ -279,7 +279,7 @@ export default function Home() {
             </div>
             <div className="band-shade" />
             <div className="band-content">
-              <h2 className="display big-h">Your next favourite person is <em>one scan away.</em></h2>
+              <h2 className="display big-h">Because life is better <em>experienced together</em></h2>
               <Waitlist />
               <span className="band-note">Invites go out weekly. Core features stay free, forever.</span>
             </div>
