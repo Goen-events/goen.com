@@ -1,7 +1,7 @@
 // All page copy and data in one place so it can be edited without touching layout.
 
-export const shiftWords = 'Your network is your net\u00A0worth. Goen helps you build both'.split(' ');
-export const shiftHighlightFrom = 5; // "Goen helps you build both" sits on its own line in a highlight pill
+export const shiftWords = 'If your network is your net\u00A0worth. Goen helps you build both'.split(' ');
+export const shiftHighlightFrom = 6; // "Goen helps you build both" sits on its own line in a highlight pill
 
 export type Feature = {
   key: 'scan' | 'voice' | 'map';
