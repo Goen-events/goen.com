@@ -160,9 +160,17 @@ button { font: inherit; }
 .pulse-dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--ink); animation: gv-pulse 2.4s ease-out infinite; }
 .callout-pos { position: absolute; width: clamp(176px, 36%, 232px); }
 .callout-pos > div { width: 100%; }
-.callout-pos.share { right: 2%; top: 6%; }
-.callout-pos.notes { left: 0; top: 42%; }
-.callout-pos.first { right: 0; bottom: 4%; }
+.callout-pos.share { right: 2%; top: 2%; }
+.callout-pos.notes { left: 0; top: 40%; }
+.callout-pos.first { right: 0; bottom: 0; }
+/* Wide screens: there's empty card space either side of the orbit, so pull the callouts outward to stop them overlapping.
+   Each offset is a fixed push, capped by the real gutter ((100cqw - 100%) / 2, less 12px) so a card is never clipped by the card edge. */
+@media (min-width: 1000px) {
+  .network { container-type: inline-size; }
+  .callout-pos.share { right: max(-100px, calc(12px - (100cqw - 100%) / 2)); top: 0; }
+  .callout-pos.notes { left: max(-120px, calc(12px - (100cqw - 100%) / 2)); top: 38%; }
+  .callout-pos.first { right: max(-90px, calc(12px - (100cqw - 100%) / 2)); bottom: -2%; }
+}
 .callouts-stack { display: none; position: relative; z-index: 1; margin-top: -12px; flex-direction: column; gap: 12px; }
 @media (max-width: 719px) {
   .callout-pos { display: none; }
