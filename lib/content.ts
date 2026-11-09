@@ -27,7 +27,7 @@ export const features: Feature[] = [
     img: '/img/voice-hallway.webp', pos: '50% 35%', alt: 'A woman recording a voice note in a lamplit hallway outside a dinner party',
   },
   {
-    key: 'map', num: '03', short: 'NETWORK', title: 'See who’s', em: 'in your life.',
+    key: 'map', num: '03', short: 'NETWORK', title: 'Fully organised network', em: '& actionable insights',
     line: 'Everyone you know, arranged around you, with a nudge when someone starts to drift.',
     img: '/img/network-dining.webp', pos: '40% 35%', alt: 'Friends laughing and greeting each other around a dinner table in a wood-panelled room',
   },
