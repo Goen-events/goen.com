@@ -160,7 +160,7 @@ export default function Home() {
             <div className="network" data-reveal="up" style={delay(80)}>
               <div className="network-head">
                 <h2 className="network-title serif">
-                  Goen is your personal network management tool, helping you <em className="accent">get more out of your connections.</em>
+                  Goen is your personal network intelligence tool, helping you <em className="accent">get more out of your connections.</em>
                 </h2>
                 <div className="legend">
                   <span><i />Close</span>
