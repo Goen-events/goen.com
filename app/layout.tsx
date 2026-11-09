@@ -5,15 +5,15 @@ const description = 'One scan to swap everything. One place to remember everyone
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://goen-landing.vercel.app'),
-  title: 'goen — Get more out of your relationships',
+  title: 'goen — Helping you turn connections into real relationships',
   description,
   openGraph: {
-    title: 'goen — Get more out of your relationships',
+    title: 'goen — Helping you turn connections into real relationships',
     description,
     images: [{ url: '/img/hero-paris-cafe.webp', width: 1536, height: 1024, alt: 'Friends talking around a marble table in a Paris café at dusk' }],
     type: 'website',
   },
-  twitter: { card: 'summary_large_image', title: 'goen — Get more out of your relationships', description, images: ['/img/hero-paris-cafe.webp'] },
+  twitter: { card: 'summary_large_image', title: 'goen — Helping you turn connections into real relationships', description, images: ['/img/hero-paris-cafe.webp'] },
 };
 
 export const viewport: Viewport = { themeColor: '#f5f1e8' };

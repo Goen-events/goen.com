@@ -113,7 +113,7 @@ export default function Home() {
               <div className="hero-copy">
                 <h1 className="display">
                   <span className="mask">
-                    <span data-reveal="rise" style={delay(120)}>Get more out of your <em>relationships.</em></span>
+                    <span data-reveal="rise" style={delay(120)}>Helping you turn connections into <em>real relationships.</em></span>
                   </span>
                 </h1>
                 <p className="hero-sub" data-reveal="up" style={delay(300)}>One scan to swap everything. One place to remember everyone.</p>
@@ -293,7 +293,7 @@ export default function Home() {
           <div className="footer-grid">
             <div className="footer-brand">
               <span className="serif"><img src="/img/goen-mark.svg" alt="" className="logo-mark" width={219} height={207} />goen</span>
-              <span>Get more out of your relationships.</span>
+              <span>Helping you turn connections into real relationships.</span>
             </div>
             <div className="footer-col">
               <span className="kicker">PRODUCT</span>
