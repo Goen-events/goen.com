@@ -28,7 +28,7 @@ export const features: Feature[] = [
   },
   {
     key: 'map', num: '03', short: 'NETWORK', title: 'Fully organised network', em: '& actionable insights',
-    line: 'Everyone you know, arranged around you, with a nudge when someone starts to drift.',
+    line: 'All your contacts are categorised and your engagement tracked so we can provide useful relationship development insights',
     img: '/img/network-dining.webp', pos: '40% 35%', alt: 'Friends laughing and greeting each other around a dinner table in a wood-panelled room',
   },
 ];
