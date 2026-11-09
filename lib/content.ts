@@ -23,7 +23,7 @@ export const features: Feature[] = [
   },
   {
     key: 'voice', num: '02', short: 'VOICE NOTES', title: 'Store', em: 'personalised context',
-    line: 'Leave a ten-second voice note on each profile. Press play next time and the whole conversation comes back.',
+    line: 'Leave a short voice note on each new contact for automatic network organisation and personalised insights.',
     img: '/img/voice-hallway.webp', pos: '50% 35%', alt: 'A woman recording a voice note in a lamplit hallway outside a dinner party',
   },
   {
