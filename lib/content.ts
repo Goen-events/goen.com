@@ -50,12 +50,12 @@ export const stories: Story[] = [
 ];
 
 export const faqs: [string, string][] = [
-  ['Does the other person need goen?', 'Nope. Your code opens your page in their browser, where they can follow, save or message you on each platform in a tap. If they’re on goen too, you land in each other’s index automatically.'],
+  ['Does the other person need Goen?', 'Nope. Your code opens your page in their browser, where they can follow, save or message you on each platform in a tap. If they’re on Goen too, you land in each other’s index automatically.'],
   ['What can I share?', 'Any social or professional profile, your portfolio, number, email, a calendar link or a playlist. Make different sets for different rooms and switch in a second.'],
-  ['How does goen know what to suggest?', 'From what people choose to share with you, plus your own notes — where you met, what you talked about, what you want to follow up on. We never scrape anyone’s profile.'],
+  ['How does Goen know what to suggest?', 'From what people choose to share with you, plus your own notes — where you met, what you talked about, what you want to follow up on. We never scrape anyone’s profile.'],
   ['Who can see my people?', 'Only you. Your index is private, and nothing about your connections is ever shared or sold.'],
-  ['Will goen message people for me?', 'Never on its own. It drafts a first message; you tweak it and send it yourself, wherever you like.'],
-  ['When can I get in?', 'Invites go out in small groups every week. Everyone in the beta keeps the core features free — that’s the Beta Forever promise.'],
+  ['Will Goen message people for me?', 'Never on its own. It drafts a first message; you tweak it and send it yourself, wherever you like.'],
+  ['When can I get in?', 'Invites go out in small groups every week. Core features stay free, forever.'],
 ];
 
 // Orbit diagram: same seeded layout as the prototype so dot positions match.
