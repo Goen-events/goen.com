@@ -160,16 +160,16 @@ button { font: inherit; }
 .pulse-dot::after { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--ink); animation: gv-pulse 2.4s ease-out infinite; }
 .callout-pos { position: absolute; width: clamp(176px, 36%, 232px); }
 .callout-pos > div { width: 100%; }
-.callout-pos.share { right: 2%; top: 2%; }
-.callout-pos.notes { left: 0; top: 40%; }
-.callout-pos.first { right: 0; bottom: 0; }
+.callout-pos.capture { right: 2%; top: 2%; }
+.callout-pos.organise { left: 0; top: 40%; }
+.callout-pos.ask { right: 0; bottom: 0; }
 /* Wide screens: there's empty card space either side of the orbit, so pull the callouts outward to stop them overlapping.
    Each offset is a fixed push, capped by the real gutter ((100cqw - 100%) / 2, less 12px) so a card is never clipped by the card edge. */
 @media (min-width: 1000px) {
   .network { container-type: inline-size; }
-  .callout-pos.share { right: max(-100px, calc(12px - (100cqw - 100%) / 2)); top: 0; }
-  .callout-pos.notes { left: max(-120px, calc(12px - (100cqw - 100%) / 2)); top: 38%; }
-  .callout-pos.first { right: max(-90px, calc(12px - (100cqw - 100%) / 2)); bottom: -2%; }
+  .callout-pos.capture { right: max(-100px, calc(12px - (100cqw - 100%) / 2)); top: 0; }
+  .callout-pos.organise { left: max(-120px, calc(12px - (100cqw - 100%) / 2)); top: 38%; }
+  .callout-pos.ask { right: max(-90px, calc(12px - (100cqw - 100%) / 2)); bottom: -2%; }
 }
 .callouts-stack { display: none; position: relative; z-index: 1; margin-top: -12px; flex-direction: column; gap: 12px; }
 @media (max-width: 719px) {
@@ -227,6 +227,16 @@ button { font: inherit; }
 .chip-quote { font-size: 13px; line-height: 1.45; color: var(--ink-2); text-wrap: pretty; }
 .chip .dots span { width: 30px; height: 30px; }
 .chip .dots span + span { margin-left: -10px; }
+.chat { display: flex; flex-direction: column; gap: 8px; }
+.bubble { max-width: 90%; font-size: 13px; line-height: 1.45; padding: 9px 12px; border-radius: 14px; text-wrap: pretty; }
+.bubble b { font-weight: 700; }
+.bubble.out { align-self: flex-end; background: var(--accent); color: var(--on-accent); border-bottom-right-radius: 4px; }
+.bubble.in { align-self: flex-start; background: var(--surface-2); color: var(--ink); border-bottom-left-radius: 4px; }
+.bubble.voice { width: 90%; display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 8px; }
+.bubble.voice .play { width: 30px; height: 30px; background: var(--on-accent); }
+.bubble.voice .play::before { border-left-color: var(--accent); }
+.bubble.voice .wave { height: 24px; }
+.bubble.voice small { flex: none; font-size: 11px; opacity: .8; }
 .chip-drift { font-size: 14px; line-height: 1.35; color: var(--ink); }
 .chip-cta { font-size: 13px; font-weight: 700; color: var(--accent); }
 .h-copy { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 var(--h-pad) var(--h-pad); display: flex; flex-direction: column; gap: 18px; pointer-events: none; color: var(--media-ink); }
@@ -242,6 +252,26 @@ button { font: inherit; }
 @media (max-width: 819px) { .h-chip-pos { display: none; } }
 /* Keep the copy in its own column so it never runs under the chip. */
 @media (min-width: 820px) { .h-copy { padding-right: calc(290px + var(--h-pad) * 2); } }
+
+/* ---------- Hardware ---------- */
+@keyframes hw-ping { 0% { transform: scale(.9); opacity: .7; } 100% { transform: scale(2.3); opacity: 0; } }
+.hw { padding: clamp(40px, 5vw, 72px) clamp(16px, 3vw, 40px) 0; scroll-margin-top: 80px; }
+.hw-card { position: relative; overflow: hidden; max-width: 1240px; margin: 0 auto; border-radius: 36px; background: var(--surface-2); border: 1px solid rgba(var(--ink-rgb), .08); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: clamp(32px, 4vw, 64px); padding: clamp(32px, 5vw, 72px); }
+.hw-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.hw-copy h2 { font-size: clamp(34px, 3.8vw, 60px); line-height: 1.02; }
+.hw-copy h2 em { display: block; }
+.hw-copy p { margin: 0; max-width: 30em; font-size: 18px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; }
+.hw-copy .btn { padding: 15px 26px; font-size: 15px; }
+.hw-visual { position: relative; width: min(100%, 420px); aspect-ratio: 1; margin: 0 auto; display: grid; place-items: center; }
+.hw-glow { position: absolute; inset: -30%; border-radius: 50%; background: radial-gradient(circle, rgba(var(--deep-rgb), .2) 0%, rgba(var(--deep-rgb), .07) 30%, transparent 60%); pointer-events: none; }
+.hw-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(var(--ink-rgb), .1); }
+.hw-ping { position: absolute; width: 40%; aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--accent); opacity: 0; animation: hw-ping 3.2s ease-out infinite; }
+.hw-device { position: relative; width: 38%; aspect-ratio: 1; border-radius: 32%; background: radial-gradient(circle at 30% 25%, #3b3632, var(--ink) 70%); box-shadow: 0 30px 60px rgba(var(--shade-rgb), .35), inset 0 1px 0 rgba(255, 255, 255, .12); display: grid; place-items: center; }
+.hw-light { width: 13%; aspect-ratio: 1; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 6px rgba(var(--accent-rgb), .3), 0 0 24px rgba(var(--accent-rgb), .9); }
+@media (max-width: 819px) {
+  .hw-card { grid-template-columns: 1fr; }
+  .hw-visual { width: min(100%, 280px); order: -1; }
+}
 
 /* ---------- Testimonials ---------- */
 .stories { overflow: hidden; }
@@ -326,5 +356,5 @@ button { font: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .orbit-spin, .pulse-dot::after, .chip-avatar::after, .wave span, .caret { animation: none !important; }
+  .orbit-spin, .pulse-dot::after, .chip-avatar::after, .wave span, .caret, .hw-ping { animation: none !important; }
 }

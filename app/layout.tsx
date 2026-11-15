@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-const description = 'Networking is hard... So let us handle the logistics while you focus on the people. Join the goen beta.';
+const description = 'Networking is hard. Just text Goen on WhatsApp or iMessage and let us handle the logistics while you focus on the people. Join the Goen beta.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://goen-landing.vercel.app'),
-  title: 'goen — Helping you turn connections into real relationships',
+  title: 'Goen — Helping you turn connections into real relationships',
   description,
   openGraph: {
-    title: 'goen — Helping you turn connections into real relationships',
+    title: 'Goen — Helping you turn connections into real relationships',
     description,
     images: [{ url: '/img/hero-paris-cafe.webp', width: 1536, height: 1024, alt: 'Friends talking around a marble table in a Paris café at dusk' }],
     type: 'website',
   },
-  twitter: { card: 'summary_large_image', title: 'goen — Helping you turn connections into real relationships', description, images: ['/img/hero-paris-cafe.webp'] },
+  twitter: { card: 'summary_large_image', title: 'Goen — Helping you turn connections into real relationships', description, images: ['/img/hero-paris-cafe.webp'] },
 };
 
 export const viewport: Viewport = { themeColor: '#f5f1e8' };

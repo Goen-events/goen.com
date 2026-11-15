@@ -6,54 +6,57 @@ import { buildOrbit, features, shiftWords, shiftHighlightFrom, stories, wave, ty
 
 const delay = (ms: number) => ({ ['--d' as string]: `${ms}ms` }) as CSSProperties;
 
-function Callout({ kind }: { kind: 'share' | 'notes' | 'first' }) {
-  if (kind === 'share')
+function Callout({ kind }: { kind: 'capture' | 'organise' | 'ask' }) {
+  if (kind === 'capture')
     return (
       <div className="callout">
-        <div className="callout-row"><span className="pulse-dot" /><span className="callout-k">SHARE</span></div>
-        <span className="callout-t">New people land on the outer ring the moment they scan.</span>
+        <div className="callout-row"><span className="pulse-dot" /><span className="callout-k">CAPTURE</span></div>
+        <span className="callout-t">Voice-note or text Goen after you meet someone. They land on your map, context and all.</span>
       </div>
     );
-  if (kind === 'notes')
+  if (kind === 'organise')
     return (
       <div className="callout">
-        <span className="callout-k">NOTES</span>
-        <span className="callout-t">Where you met, and what you talked about, pinned to each person.</span>
+        <span className="callout-k">ORGANISE</span>
+        <span className="callout-t">Where you met and what you talked about, sorted and pinned to each person automatically.</span>
       </div>
     );
   return (
     <div className="callout">
-      <span className="callout-k">FIRST MESSAGE</span>
-      <span className="callout-t">Drifting? Goen drafts the note that pulls them back in.</span>
-      <span className="callout-bubble">“Still thinking about that ceramics studio<span className="caret">|</span>”</span>
+      <span className="callout-k">ASK</span>
+      <span className="callout-t">Call on it in the same chat, whenever you need it.</span>
+      <span className="callout-bubble">“Who was the ceramicist from Sofia’s dinner?<span className="caret">|</span>”</span>
     </div>
   );
 }
 
 function Chip({ kind }: { kind: Feature['key'] }) {
-  if (kind === 'scan')
-    return (
-      <div className="chip">
-        <div className="chip-row">
-          <span className="chip-avatar">T</span>
-          <div className="chip-name"><b>Theo saved your details</b><small>Just now · Rooftop, Surry Hills</small></div>
-        </div>
-        <div className="tags"><span>Instagram</span><span>LinkedIn</span><span>Portfolio</span><span>Number</span></div>
-      </div>
-    );
   if (kind === 'voice')
     return (
       <div className="chip wide">
-        <div className="chip-top"><span className="callout-k">VOICE NOTE · LEILA</span><small>0:12</small></div>
-        <div className="chip-row" style={{ gap: 12 }}>
-          <span className="play" />
-          <div className="wave">
-            {wave.map((b, i) => (
-              <span key={i} style={{ height: `${b.h}%`, background: b.c, animationDelay: `${b.d}s` }} />
-            ))}
+        <div className="chip-top"><span className="callout-k">WHATSAPP · GOEN</span><small>9:41 pm</small></div>
+        <div className="chat">
+          <div className="bubble out voice">
+            <span className="play" />
+            <div className="wave">
+              {wave.map((b, i) => (
+                <span key={i} style={{ height: `${b.h}%`, background: b.c, animationDelay: `${b.d}s` }} />
+              ))}
+            </div>
+            <small>0:12</small>
           </div>
+          <div className="bubble in">Saved <b>Leila</b>. Met at Sofia’s dinner, opening a ceramics studio. I’ll remind you to intro her to Maya.</div>
         </div>
-        <span className="chip-quote">“Met at Sofia’s dinner. Opening a ceramics studio. Intro her to Maya.”</span>
+      </div>
+    );
+  if (kind === 'ask')
+    return (
+      <div className="chip wide">
+        <div className="chip-top"><span className="callout-k">IMESSAGE · GOEN</span><small>Now</small></div>
+        <div className="chat">
+          <div className="bubble out">Who was the ceramicist from Sofia’s dinner?</div>
+          <div className="bubble in"><b>Leila H.</b> You met in March. She’s opening a studio and wanted an intro to Maya. Want me to draft a hello?</div>
+        </div>
       </div>
     );
   return (
@@ -116,7 +119,7 @@ export default function Home() {
                     <span data-reveal="rise" style={delay(120)}>Helping you turn connections into <em>real relationships.</em></span>
                   </span>
                 </h1>
-                <p className="hero-sub" data-reveal="up" style={delay(300)}>Networking is hard... So let us handle the logistics while you focus on the people</p>
+                <p className="hero-sub" data-reveal="up" style={delay(300)}>Networking is hard. Just text Goen on WhatsApp or iMessage and let us handle the logistics while you focus on the people.</p>
                 <div className="hero-actions" data-reveal="up" style={delay(420)}>
                   <a href="#join" className="btn">Join the beta</a>
                   <a href="#product" className="text-link">See it in action</a>
@@ -148,7 +151,7 @@ export default function Home() {
               </mark>
             </p>
             <p className="shift-sub" data-reveal="up" style={delay(100)}>
-              Goen replaces the handle-swapping, the forgotten names and the “great to meet you” that goes nowhere.
+              No new app to open. Goen lives in the chats you already use, so names, context and follow-ups stop slipping through the cracks.
             </p>
           </div>
         </section>
@@ -188,15 +191,15 @@ export default function Home() {
                   </div>
                 ))}
                 <div className="orbit-you">You</div>
-                <div className="callout-pos share"><div><Callout kind="share" /></div></div>
-                <div className="callout-pos notes"><div><Callout kind="notes" /></div></div>
-                <div className="callout-pos first"><div><Callout kind="first" /></div></div>
+                <div className="callout-pos capture"><div><Callout kind="capture" /></div></div>
+                <div className="callout-pos organise"><div><Callout kind="organise" /></div></div>
+                <div className="callout-pos ask"><div><Callout kind="ask" /></div></div>
               </div>
 
               <div className="callouts-stack">
-                <Callout kind="share" />
-                <Callout kind="notes" />
-                <Callout kind="first" />
+                <Callout kind="capture" />
+                <Callout kind="organise" />
+                <Callout kind="ask" />
               </div>
             </div>
           </div>
@@ -235,6 +238,26 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* HARDWARE */}
+        <section id="hardware" className="hw">
+          <div className="hw-card" data-reveal="up" style={delay(80)}>
+            <div className="hw-copy">
+              <h2 className="display">A new way to talk to Goen. <em className="accent">Coming soon.</em></h2>
+              <p>We’re building a small device that lets you capture context the moment a conversation ends, without reaching for your phone. Everything still lands in the same network, ready to call on in your chats.</p>
+              <a href="#join" className="btn">Get early access</a>
+            </div>
+            <div className="hw-visual" aria-hidden="true">
+              <div className="hw-glow" />
+              <span className="hw-ring" style={{ inset: '0%' }} />
+              <span className="hw-ring" style={{ inset: '14%' }} />
+              <span className="hw-ring" style={{ inset: '28%' }} />
+              <span className="hw-ping" />
+              <span className="hw-ping" style={{ animationDelay: '1.6s' }} />
+              <div className="hw-device"><span className="hw-light" /></div>
             </div>
           </div>
         </section>
@@ -298,6 +321,7 @@ export default function Home() {
             <div className="footer-col">
               <span className="kicker">PRODUCT</span>
               <a href="#product">Features</a>
+              <a href="#hardware">Hardware</a>
               <a href="#faq">FAQ</a>
             </div>
             <div className="footer-col">
