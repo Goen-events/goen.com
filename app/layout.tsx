@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
-const description = 'Networking is hard. Just text Goen on WhatsApp or iMessage and let us handle the logistics while you focus on the people. Join the Goen beta.';
+const description = 'No more empty conversations. Text or voice note Goen on WhatsApp or iMessage to store network context and draw insights. We handle the details so you can focus on the people. Join the Goen beta.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://goen-landing.vercel.app'),

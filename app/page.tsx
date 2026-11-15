@@ -119,7 +119,7 @@ export default function Home() {
                     <span data-reveal="rise" style={delay(120)}>Helping you turn connections into <em>real relationships.</em></span>
                   </span>
                 </h1>
-                <p className="hero-sub" data-reveal="up" style={delay(300)}>Networking is hard. Just text Goen on WhatsApp or iMessage and let us handle the logistics while you focus on the people.</p>
+                <p className="hero-sub" data-reveal="up" style={delay(300)}>No more empty conversations. Text or voice note Goen on WhatsApp or iMessage to store network context and draw insights. We handle the details so you can focus on the people.</p>
                 <div className="hero-actions" data-reveal="up" style={delay(420)}>
                   <a href="#join" className="btn">Join the beta</a>
                   <a href="#product" className="text-link">See it in action</a>
@@ -151,7 +151,7 @@ export default function Home() {
               </mark>
             </p>
             <p className="shift-sub" data-reveal="up" style={delay(100)}>
-              No new app to open. Goen lives in the chats you already use, so names, context and follow-ups stop slipping through the cracks.
+              Easily attach context to any contact after an interaction for future queries and automated network management.
             </p>
           </div>
         </section>

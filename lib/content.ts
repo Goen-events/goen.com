@@ -1,7 +1,7 @@
 // All page copy and data in one place so it can be edited without touching layout.
 
-export const shiftWords = 'If your network is your net\u00A0worth. Goen helps you build both'.split(' ');
-export const shiftHighlightFrom = 6; // "Goen helps you build both" sits on its own line in a highlight pill
+export const shiftWords = 'A valuable network is more than LinkedIn\u00A0connections. It’s the real relationships that can only be built\u00A0with consistent attention over\u00A0time'.split(' ');
+export const shiftHighlightFrom = 16; // "consistent attention over time" sits on its own line in a highlight pill
 
 export type Feature = {
   key: 'voice' | 'map' | 'ask';
