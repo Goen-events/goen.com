@@ -274,7 +274,7 @@ export default function Home() {
                   <figure key={s.name} className="story">
                     <blockquote>“{s.quote}”</blockquote>
                     <figcaption>
-                      <img src={s.img} alt="" width={52} height={52} loading="lazy" />
+                      <img src={s.img} alt="" width={36} height={36} loading="lazy" />
                       <div className="story-who"><b>{s.name}</b><span>{s.role}</span></div>
                     </figcaption>
                   </figure>
