@@ -30,6 +30,7 @@ Set these in `.env.local` locally and in the Vercel project (never commit them):
 | `components/Faq.tsx` | Single-open accordion |
 | `components/Waitlist.tsx` | Waitlist form; posts to `/api/waitlist` |
 | `app/api/waitlist/route.ts` | Validates and upserts `{ name, email }` into Supabase `signups` (honeypot field `company`) |
+| `app/api/keepalive/route.ts` | Daily Vercel cron target (`vercel.json`); one cheap query so free-tier Supabase never auto-pauses. Checks `CRON_SECRET` if set |
 | `lib/supabase.ts` | Server-only Supabase client using the secret key |
 | `public/img/` | WebP exports of the handoff images; avatars pre-cropped to 320px squares |
 
