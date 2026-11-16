@@ -14,11 +14,10 @@ export async function GET(request: Request) {
   }
 
   const { error } = await supabaseServer()
-    .from('signups')
-    .select('email', { count: 'exact', head: true });
+    .rpc('join_waitlist', { p_email: 'keepalive@goen.invalid', p_name: 'keepalive' });
 
   if (error) {
-    console.error('[keepalive] Supabase query failed', error);
+    console.error('[keepalive] Supabase call failed', error);
     return NextResponse.json({ ok: false }, { status: 500 });
   }
 

@@ -15,8 +15,8 @@ Set these in `.env.local` locally and in the Vercel project (never commit them):
 
 | Variable | Value |
 | --- | --- |
-| `SUPABASE_URL` | goen-lp project URL |
-| `SUPABASE_SECRET_KEY` | Secret key (`sb_secret_…`), not the publishable key — `signups` has RLS with no policies |
+| `SUPABASE_URL` | goen-network project URL |
+| `SUPABASE_PUBLISHABLE_KEY` | Publishable key (`sb_publishable_…`). It can only call `join_waitlist`; `signups` has RLS with no policies, so emails are not readable with it |
 | `NEXT_PUBLIC_SITE_URL` | Production URL, used for OG/meta links |
 
 ## Layout
@@ -29,15 +29,17 @@ Set these in `.env.local` locally and in the Vercel project (never commit them):
 | `components/ScrollEffects.tsx` | One rAF scroll handler: header pill, reveals, hero zoom, CTA parallax, word fill, horizontal rail |
 | `components/Faq.tsx` | Single-open accordion |
 | `components/Waitlist.tsx` | Waitlist form; posts to `/api/waitlist` |
-| `app/api/waitlist/route.ts` | Validates and upserts `{ name, email }` into Supabase `signups` (honeypot field `company`) |
+| `app/api/waitlist/route.ts` | Validates and saves `{ name, email }` via the Supabase `join_waitlist` function (honeypot field `company`) |
 | `app/api/keepalive/route.ts` | Daily Vercel cron target (`vercel.json`); one cheap query so free-tier Supabase never auto-pauses. Checks `CRON_SECRET` if set |
-| `lib/supabase.ts` | Server-only Supabase client using the secret key |
+| `lib/supabase.ts` | Server-only Supabase client using the publishable key |
 | `public/img/` | WebP exports of the handoff images; avatars pre-cropped to 320px squares |
 
 ## Notes
 
-- **Waitlist** writes to the `signups` table in the Supabase project "goen-lp" (same table
-  the `Goen-events/goen` app uses). Duplicate emails upsert, so re-joining still shows success.
+- **Waitlist** writes to the `signups` table in the Supabase project "goen-network" through the
+  `join_waitlist` function. Duplicate emails upsert, so re-joining still shows success. View
+  signups in the Supabase dashboard (Table editor → `signups`). The keepalive cron upserts one
+  `keepalive@goen.invalid` row; ignore it.
 - **Placeholder links** in the footer (About, Careers, socials, Privacy, Terms) point to `#`.
 - **Testimonials and the "1,000+ people" figure** are copy from the design, not real data.
 - Reduced motion turns off reveals, zoom, parallax and card scaling, and shows the shift text fully filled.

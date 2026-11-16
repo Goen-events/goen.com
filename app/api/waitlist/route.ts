@@ -20,14 +20,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
   }
 
-  // Upsert on the unique email so signing up twice still reads as a success,
-  // with the newer name winning and the original created_at kept.
-  const { error } = await supabaseServer()
-    .from('signups')
-    .upsert({ email, name: asString(body.name, 120) }, { onConflict: 'email' });
+  // join_waitlist upserts on the unique email, so signing up twice still reads as a
+  // success, with the newer name winning and the original created_at kept.
+  let error: unknown;
+  try {
+    ({ error } = await supabaseServer().rpc('join_waitlist', {
+      p_email: email,
+      p_name: asString(body.name, 120),
+    }));
+  } catch (err) {
+    error = err;
+  }
 
   if (error) {
-    console.error('[waitlist] could not save signup', error);
+    console.error('[waitlist] could not save signup', { email, error });
     return NextResponse.json({ error: 'Could not save signup' }, { status: 500 });
   }
 
